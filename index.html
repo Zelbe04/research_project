@@ -1,6 +1,39 @@
 <html>
-<head><meta charset="utf-8" /></head>
+<head><meta charset="utf-8" />
+  <style>
+      /* Style the header */
+      .header {
+      padding: 10px 16px;
+      /* background: #555;
+      color: #f1f1f1; */
+      font-family: "Open Sans", verdana, arial, sans-serif;
+      font-size: 0.7em;
+      }
+
+      /* Page content */
+      .content {
+      padding: 16px;
+      }
+
+      /* The sticky class is added to the header with JS when it reaches its scroll position */
+      .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%
+      }
+
+      /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+      .sticky + .content {
+      padding-top: 102px;
+      }
+  </style>
+</head>
 <body>
+    <div id="header" class="header">
+      The daily rainfall map is created using the <a href="https://sawx.co.za/rainfall-reenval/daily-recorded-rainfall-data-figures-south-africa/" target="_blank">South African Weather Service (SAWS) daily recorded rainfall figures</a> and the <a href="https://openweathermap.org/api/accumulated-parameters#precip" target="_blank">OpenWeatherMap accumulated precipitation</a>. <br>
+      Contributors: <a href="https://github.com/Zelbe04" target="_blank">Zelbé Boshoff</a> <br>
+      Supervisors: <a href="https://github.com/vrautenbach" target="_blank">Victoria Rautenbach</a> and <a href="https://www.up.ac.za/geography-geoinformatics-and-meteorology/article/2662732/liesl-dyson" traget="_blank">Liesl Dyson</a>
+    </div>
     <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
         <script type="text/javascript">/**
 * plotly.js v2.9.0
